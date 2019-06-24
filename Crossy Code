@@ -1,0 +1,6 @@
+echo "# Crossy_RPG_Game" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/Mcloafer/Crossy_RPG_Game.git
+git push -u origin master
