@@ -139,17 +139,9 @@ class Game:
                 clock.tick(1)
                 break
             
+            #This condition will detect the treasure and keep the game going, but end the game after a certain amount of levels have been won
             elif player_character.detect_collision(treasure):
-                    is_game_over = True
-                    did_win = True
-                    text = font.render('Keep going!', True, BLACK_COLOR)
-                    self.game_screen.blit(text, (290, 350))
-                    pygame.display.update()
-                    clock.tick(1)
-                    break
-            
-            while level_speed == 1:
-                if player_character.detect_collision(treasure):
+                if level_speed == 3.75:
                     is_game_over = True
                     did_win = False
                     text = font.render('Congratulations, you have won!', True, BLACK_COLOR)
@@ -157,6 +149,15 @@ class Game:
                     pygame.display.update()
                     clock.tick(1)
                     break
+                else:
+                    is_game_over = True
+                    did_win = True
+                    text = font.render('Keep going!', True, BLACK_COLOR)
+                    self.game_screen.blit(text, (290, 350))
+                    pygame.display.update()
+                    clock.tick(1)
+                    break
+
             #Update all game graphics
             pygame.display.update()
             #Tick the clock to update everything within the game
