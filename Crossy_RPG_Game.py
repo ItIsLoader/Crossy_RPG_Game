@@ -1,7 +1,3 @@
-#Pygame development 1
-#Start the basic game set up
-#Set up the display
-
 #Gain access to the pygame library
 import pygame
 
@@ -12,10 +8,6 @@ SCREEN_TITLE = 'Crossy RPG'
 #Colors according to RGB codes
 WHITE_COLOR = (255, 255, 255)
 BLACK_COLOR = (0, 0, 0)
-
-#Pygame development 2
-#Set up the game loop
-#Use game loop to render graphics
 
 #Clock used to update game events and frames
 clock = pygame.time.Clock()
@@ -139,7 +131,7 @@ class Game:
                 clock.tick(1)
                 break
             
-            #This condition will detect the treasure and keep the game going, but end the game after a certain amount of levels have been won
+            #This condition will detect treasure collision, but end the game after a certain amount of levels have been won
             elif player_character.detect_collision(treasure):
                 if level_speed == 3.75:
                     is_game_over = True
@@ -243,35 +235,3 @@ new_game.run_game_loop(1)
 #Quit pygame and the program
 pygame.quit()
 quit()
-
-#Pygame Development 3
-#Draw object to the screen
-#Load images into object
-
-#Pygame development 4
-#Focus on making code object oriented
-#Introduce classes and object into our code
-
-#Pygame Development 5
-#Implement game classes
-#Implement generic game object class
-
-#Pygame Development 6
-#Implement Game Classes
-#Implement Player Character Class and Movement
-
-#Pygame development 7
-#Implement game classes
-#Implement enemy character class and bounds checking
-
-#Pygame Development 8
-#Implement collision detection
-#Detect collisions with treasure and enemies
-
-#Pygame Development 9
-#Add true end game conditions
-#Implement specific win and lose conditions
-
-#Pygame development 10
-#Make the game more interesting
-#Add More enemies
